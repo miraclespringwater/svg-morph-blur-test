@@ -1,0 +1,40 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: #1e40af; */
+  background-color: rgb(1, 10, 58);
+}
+svg:not(:root) {
+  overflow-clip-margin: content-box;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+}
+
+g {
+  /* transform: translate(-5em, 10em) scaleY(.3) scaleX(2) rotateY(5deg) */
+  transform: translate(10em, 0) rotateZ(100deg)
+  /* transform: scaleX(2) scaleY(0.3) scaleZ(1) rotateX(5deg) rotateY(12deg) rotateZ(-15deg) translateX(5em) translateY(-10em) translateZ(1em)  */
+}
+
+/* .multipath { */
+/*   position: absolute; */
+/*   top: 50%; */
+/*   left: 50%; */
+/*   transform: translate(-50%, -50%) */
+/* } */
+.fixed {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  backdrop-filter: blur(2em);
+  filter: blur(0);
+  background-color: #ffffff00
+}
