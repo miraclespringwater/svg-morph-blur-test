@@ -1,10 +1,5 @@
 import anime from "animejs";
 
-const pathOne =
-  "M0,32L40,80C80,128,160,224,240,240C320,256,400,192,480,170.7C560,149,640,171,720,186.7C800,203,880,213,960,192C1040,171,1120,117,1200,101.3C1280,85,1360,107,1400,117.3L1440,128L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z";
-const pathTwo =
-  "M0,128L40,154.7C80,181,160,235,240,245.3C320,256,400,224,480,186.7C560,149,640,107,720,122.7C800,139,880,213,960,245.3C1040,277,1120,267,1200,218.7C1280,171,1360,85,1400,42.7L1440,0L1440,0L1400,0C1360,0,1280,0,1200,0C1120,0,1040,0,960,0C880,0,800,0,720,0C640,0,560,0,480,0C400,0,320,0,240,0C160,0,80,0,40,0L0,0Z";
-
 const pathSet = [
   [
     "M175.2 -219.2C203.4 -220.6 186.3 -137.8 189.4 -74.3C192.4 -10.8 215.6 33.4 193.6 51.2C171.7 69 104.7 60.4 64.9 104.4C25.1 148.5 12.5 245.3 -30.4 287.1C-73.3 328.9 -146.6 315.7 -181.6 270.1C-216.6 224.5 -213.4 146.4 -191 91.3C-168.7 36.3 -127.1 4.2 -116.1 -40.2C-105.1 -84.6 -124.5 -141.4 -110.3 -144.6C-96 -147.8 -48 -97.3 12.7 -114.9C73.5 -132.4 146.9 -217.9 175.2 -219.2",
@@ -21,7 +16,6 @@ const pathSet = [
     "M154 -210C196.3 -181.2 225.1 -131.9 204.6 -91C184.2 -50.2 114.4 -17.8 91.6 22.9C68.9 63.6 93.2 112.7 85.8 172.8C78.4 232.9 39.2 303.9 7.2 294.1C-24.9 284.2 -49.8 193.5 -86.5 142.9C-123.3 92.4 -172 82 -209.3 48.7C-246.6 15.5 -272.6 -40.8 -247.5 -68.8C-222.4 -96.8 -146.2 -96.5 -96.4 -122.9C-46.6 -149.2 -23.3 -202.1 16.3 -224.5C55.8 -246.9 111.7 -238.7 154 -210",
     "M158.4 -166C215.3 -176.7 278.4 -143.8 297.4 -94.5C316.4 -45.1 291.3 20.7 255.4 68C219.5 115.4 172.6 144.3 128.2 146.2C83.9 148.1 41.9 123 -8.9 135.3C-59.8 147.6 -119.5 197.2 -150.1 190.8C-180.7 184.4 -182.1 122 -211.7 61.6C-241.3 1.1 -298.9 -57.4 -276.3 -78.2C-253.6 -99.1 -150.6 -82.3 -91.2 -70.8C-31.7 -59.3 -15.9 -53.1 17.4 -77.1C50.7 -101.1 101.5 -155.3 158.4 -166",
   ],
-  //  n e w
   [
     "M154 -210C196.3 -181.2 225.1 -131.9 204.6 -91C184.2 -50.2 114.4 -17.8 91.6 22.9C68.9 63.6 93.2 112.7 85.8 172.8C78.4 232.9 39.2 303.9 7.2 294.1C-24.9 284.2 -49.8 193.5 -86.5 142.9C-123.3 92.4 -172 82 -209.3 48.7C-246.6 15.5 -272.6 -40.8 -247.5 -68.8C-222.4 -96.8 -146.2 -96.5 -96.4 -122.9C-46.6 -149.2 -23.3 -202.1 16.3 -224.5C55.8 -246.9 111.7 -238.7 154 -210",
     "M158.4 -166C215.3 -176.7 278.4 -143.8 297.4 -94.5C316.4 -45.1 291.3 20.7 255.4 68C219.5 115.4 172.6 144.3 128.2 146.2C83.9 148.1 41.9 123 -8.9 135.3C-59.8 147.6 -119.5 197.2 -150.1 190.8C-180.7 184.4 -182.1 122 -211.7 61.6C-241.3 1.1 -298.9 -57.4 -276.3 -78.2C-253.6 -99.1 -150.6 -82.3 -91.2 -70.8C-31.7 -59.3 -15.9 -53.1 17.4 -77.1C50.7 -101.1 101.5 -155.3 158.4 -166",
@@ -41,61 +35,57 @@ const pathSet = [
 
 const colors = ["#2563eb", "#38bdf8", "#99f6e4"];
 
-// anime({
-//   targets: ".its-morphing-time .point-test",
-//   points: [
-//     {
-//       value: [
-//         "97.3,0 127.4,60.9 194.6,70.7 145.9,118.1 157.4,185.1 97.3,153.5 37.2,185.1 48.6,118.1 0,70.7 67.2, 60.9",
-//         "110,58.2 147.3,0 192.1,29 141.7,105.1 118.7,139.8 88.8,185.1 46.1,156.5 0,125 23.5,86.6 71.1, 116.7",
-//       ],
-//     },
-//   ],
-//   easing: "easeOutQuad",
-//   duration: 2000,
-//   loop: true,
-// });
-
-// anime({
-//   targets: ".d-test",
-//   d: [{ value: pathOne }, { value: pathTwo }],
-//   easing: "easeOutQuad",
-//   duration: 3000,
-//   loop: true,
-//   direction: "alternate",
-// });
-//
-
 const animations = [];
 const els = document.querySelectorAll(".multipath");
-console.log(els);
 
 els.forEach((el, i) => {
   el.setAttribute("d", pathSet[i][0]);
   el.style.fill = colors[i <= 2 ? i : i - 3];
-  anime({
-    targets: el,
-    easing: "easeInOutQuad",
-    duration: 5000,
-    loop: true,
-    direction: "alternate",
-    d: [{ value: pathSet[i] }],
-    ...(i > 2 ? { translateX: "20em" } : { translateX: "20em" }),
-  });
+  animations.push(
+    anime({
+      targets: el,
+      easing: "easeInOutQuad",
+      loop: true,
+      direction: "alternate",
+      d: [{ value: pathSet[i] }],
+      translateX: "20em",
+      autoplay: false,
+    })
+  );
 });
 
-// els.forEach((el, i) => {
-// anime({
-//   targets: el,
-//   easing: "easeOutQuad",
-//   duration: 3000,
-//   loop: true,
-//   direction: "alternate",
-//   d: pathSet[i].map((value) => {
-//     return { value };
-//   }),
-//   begin: () => {
-//     return el.d = pathSet[i][0]
-//   }
-// })
-// }
+document.addEventListener("scroll", (event) => {
+  const scrollPerc =
+    window.scrollY / (document.body.offsetHeight - window.innerHeight);
+  animations.forEach((anim) => {
+    anim.seek(anim.duration * scrollPerc);
+  });
+
+  if (scrollPerc >= 0.5) {
+    document.body.style.backgroundColor = "rgb(255, 255, 255)";
+  } else {
+    document.body.style.backgroundColor = "rgb(1, 10, 58)";
+  }
+});
+
+const tranEl = document.querySelector("#morph-container");
+
+const tranConstrain = 90;
+const rotConstrain = 60;
+
+document.body.onmousemove = (e) => {
+  const [x, y] = [e.clientX, e.clientY];
+  const [winX, winY] = [window.innerWidth, window.innerHeight];
+
+  const tranX = Math.round((x - winX / 2) / tranConstrain);
+  const tranY = Math.round((y - winY / 2) / tranConstrain);
+
+  const rotX = (x - winX / 2) / rotConstrain;
+  const rotY = (y - winX / 2) / rotConstrain;
+
+  console.log(rotX, rotY);
+
+  window.requestAnimationFrame(function () {
+    tranEl.style.transform = `translate(${tranX}px, ${tranY}px) rotateX(${rotX}deg) rotateY(${rotY}deg)`;
+  });
+};

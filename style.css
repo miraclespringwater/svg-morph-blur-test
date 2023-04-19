@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&family=Unbounded:wght@200;900&display=swap');
 * { 
   margin: 0;
   padding: 0;
@@ -7,8 +8,12 @@
 body {
   /* background-color: #1e40af; */
   background-color: rgb(1, 10, 58);
-  height: 200vh;
+  height: 500vh;
   overflow-x: hidden;
+  /* font-family: 'Rubik', sans-serif; */
+  font-family: 'Unbounded', cursive;
+  font-weight: 200;
+  transition: background-color 3s;
 }
 svg:not(:root) {
   overflow-clip-margin: content-box;
@@ -18,6 +23,9 @@ svg:not(:root) {
   top: 0;
   width: 100vw;
   height: 100%;
+}
+g {
+  /* transition: transform 1.5s; */
 }
 
 #morph-group-1 {
@@ -38,7 +46,19 @@ svg:not(:root) {
   width: 100vw;
   height: 100vh;
   position: fixed;
-  backdrop-filter: blur(6em);
+  backdrop-filter: blur(100px) hue-rotate(-50deg);
   filter: blur(0);
-  background-color: #ffffff00
+  background-color: #00000050
+}
+
+header, h1 {
+  position: relative;
+  color: black;
+  font-size: 150px;
+  font-weight: 200;
+  color: #d9f99d;
+}
+
+header {
+  padding: 20px 0px 0px 50px;
 }

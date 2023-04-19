@@ -12,26 +12,19 @@
 <body>
   <div id="app"></div>
   <div class="its-morphing-time">
-    <!-- <svg> -->
-    <!--   <g fill="white" stroke="green" stroke-width="5"> -->
-    <!--     <polygon class="point-test" stroke-width="1" stroke="blue"></polygon> -->
-    <!--   </g> -->
-    <!-- </svg> -->
-    <!---->
-    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"> -->
-    <!--   <path class="d-test" fill="#000" fill-opacity="1" d=""></path> -->
-    <!-- </svg> -->
-    <div class="bg">
+    <div id="bg">
       <svg viewBox="-300 -300 500 500">
-        <g id="morph-group-1">
-          <path class="multipath" fill-opacity="1"></path>
-          <path class="multipath" fill-opacity="1"></path>
-          <path class="multipath" fill-opacity="1"></path>
-        </g>
-        <g id="morph-group-2">
-          <path class="multipath" fill-opacity="1"></path>
-          <path class="multipath" fill-opacity="1"></path>
-          <path class="multipath" fill-opacity="1"></path>
+        <g id="morph-container">
+          <g id="morph-group-1">
+            <path class="multipath" fill-opacity="1"></path>
+            <path class="multipath" fill-opacity="1"></path>
+            <path class="multipath" fill-opacity="1"></path>
+          </g>
+          <g id="morph-group-2">
+            <path class="multipath" fill-opacity="1"></path>
+            <path class="multipath" fill-opacity="1"></path>
+            <path class="multipath" fill-opacity="1"></path>
+          </g>
         </g>
       </svg>
     </div>
@@ -39,6 +32,9 @@
     <div class="fixed"></div>
   </div>
 
+  <header>
+    <h1>studio deep-set</h1>
+  </header>
   <script type="module" src="/main.js"></script>
 </body>
 
